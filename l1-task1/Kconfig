@@ -1,0 +1,33 @@
+menu "l1-task1 menu configuration"
+
+config THREAD_LOW_PRIORITY_LEVEL
+        int "LOW priority thread priority level"
+        default 7
+        help
+          The integer priority level for the low priority
+          thread t_low_fn.
+
+config THREAD_MEDIUM_PRIORITY_LEVEL
+        int "MEDIUM priority thread priority level"
+        default 5
+        help
+          The integer priority level for the medium priority
+          thread t_med_fn.
+
+config THREAD_HIGH_PRIORITY_LEVEL
+        int "HIGH priority thread priority level"
+        default 3
+        help
+          The integer priority level for the high priority
+          thread t_high_fn.
+
+config THREAD_COOP_ENABLE
+        bool "Adds a fourth cooperative thread at -1 priority"
+        default n
+        help
+          Enables a fourth cooperative thread at -1 priority that
+          performs 5 iterations of busy work then yields.
+
+endmenu
+
+source "Kconfig.zephyr"

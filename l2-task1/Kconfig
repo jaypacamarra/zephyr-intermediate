@@ -1,0 +1,5 @@
+menu "l2-task1 menu configuration"
+
+endmenu
+
+source "Kconfig.zephyr"

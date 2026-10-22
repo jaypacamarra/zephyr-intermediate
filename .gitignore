@@ -6,5 +6,3 @@ build
 deps
 project_layout.txt
 .cache
-
-twister-out*/
